@@ -20,8 +20,8 @@ public:
     {
         idx %= 3;
         if (idx == 0) return x;
-        if (idx == 1) return y;
-        if (idx == 2) return z;
+        else if (idx == 1) return y;
+        else return z;
     }
 
     double operator[](int idx) const
@@ -31,7 +31,8 @@ public:
 
     Vector operator+() const
     {
-        return *this;
+        Vector w;
+        return w += *this;
     }
 
     Vector operator-() const
