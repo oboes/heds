@@ -2,6 +2,7 @@
 #define __HEDS_VECTOR_HPP__
 
 #include <iostream>
+#include <cmath>
 
 class Vector
 {
@@ -69,6 +70,16 @@ public:
         y /= rhs;
         z /= rhs;
         return *this;
+    }
+
+    double sqr_norm() const
+    {
+        return x*x + y*y + z*z;
+    }
+
+    double norm() const
+    {
+        return std::sqrt(sqr_norm());
     }
 };
 
